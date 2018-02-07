@@ -9,7 +9,7 @@ import org.springframework.context.annotation.Import;
 import org.springframework.context.annotation.ImportResource;
 
 @Configuration  
-@ComponentScan({"com.hpay.springboot"})  
+@ComponentScan({"com.hpay.springboot.rocketmq"})  
 @Import({DubboAutoConfiguration.class} )  
 //@ImportResource("classpath:config/*.xml")  
 @SpringBootApplication  

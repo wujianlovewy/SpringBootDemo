@@ -10,7 +10,7 @@ import org.springframework.beans.factory.annotation.Value;
 import org.springframework.boot.SpringBootConfiguration;
 import org.springframework.context.annotation.Bean;
 
-@SpringBootConfiguration
+//@SpringBootConfiguration
 public class RocketMQProducerConfiguration {
 	
 	public static final Logger LOGGER = LoggerFactory.getLogger(RocketMQProducerConfiguration.class);
@@ -33,7 +33,6 @@ public class RocketMQProducerConfiguration {
         DefaultMQProducer producer;
         producer = new DefaultMQProducer(rocketMQConfig.getGroupName());
         producer.setNamesrvAddr(rocketMQConfig.getNamesrvAddr());
-        //producer.setInstanceName(rocketMQConfig.getInstanceName());
         try {
             producer.start();
             LOGGER.info(String.format("producer is start ! groupName:[%s],namesrvAddr:[%s]"
